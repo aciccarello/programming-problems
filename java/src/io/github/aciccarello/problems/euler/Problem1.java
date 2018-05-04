@@ -5,14 +5,20 @@ package io.github.aciccarello.problems.euler;
  *
  * Find the sum of all the multiples of 3 or 5 below 1000.
  *
- * @see https://projecteuler.net/problem=1
+ * @see <a href="https://projecteuler.net/problem=1">Problem 1</a>
  */
 public class Problem1 implements EulerSolver {
-    public String description = "Multiples of 3 and 5";
-    public int number = 1;
 
-    public Integer call() {
-        return sumNaturalNumbers(1000);
+    public String getDescription() {
+        return "Multiples of 3 and 5";
+    }
+
+    public int getNumber() {
+        return 1;
+    }
+
+    public Long call() {
+        return Long.valueOf(sumNaturalNumbers(1000));
     }
 
     protected static int sumNaturalNumbers(int cap) {

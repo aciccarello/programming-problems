@@ -13,7 +13,7 @@ public class Problem2Test {
     public void fibonacci() {
         Integer[] expected = { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
         List<Integer> returned = Problem2.fibonacci(89);
-        assertTrue(returned.equals(Arrays.asList(expected)));
+        assertEquals(returned, Arrays.asList(expected));
     }
 
     @Test

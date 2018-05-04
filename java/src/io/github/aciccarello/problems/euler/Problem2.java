@@ -10,15 +10,20 @@ import java.util.List;
  *
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  *
- * @see https://projecteuler.net/problem=2
+ * @see <a href="https://projecteuler.net/problem=2">Problem 2</a>
  */
 public class Problem2 implements EulerSolver {
-    public String description = "Even Fibonacci Numbers";
-    public int number = 2;
+    public String getDescription() {
+        return "Even Fibonacci Numbers";
+    }
+
+    public int getNumber() {
+        return 2;
+    }
 
     @Override
-    public Integer call() throws Exception {
-        return sumEvenNumbers(fibonacci(4_000_000));
+    public Long call() {
+        return Long.valueOf(sumEvenNumbers(fibonacci(4_000_000)));
     }
 
     protected static List<Integer> fibonacci(int max) {
